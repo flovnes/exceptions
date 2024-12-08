@@ -10,10 +10,10 @@
             try {
                 var lines = File.ReadAllLines(path);
                 try { file_values.Add(checked(int.Parse(lines[0].Trim()) * int.Parse(lines[1].Trim()))); }
-                catch { overflows.Add(path[7..]); }
+                catch { overflows.Add(path[6..]); }
             }
-            catch ( FileNotFoundException ) { no_files.Add(path[7..]); }
-            catch { bad_files.Add(path[7..]); }
+            catch ( FileNotFoundException ) { no_files.Add(path[6..]); }
+            catch { bad_files.Add(path[6..]); }
         }
 
         try {
